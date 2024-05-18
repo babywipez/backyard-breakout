@@ -1,0 +1,29 @@
+/* Most styles in this file are for either for things
+not well supported by Tailwind (like drop shadow), or
+are toggled by functions */
+
+.custom--text-shadow {
+  text-shadow: 2px 2px 2px black;
+}
+
+.custom--text-gradient {
+  background: -webkit-linear-gradient(white, lightsteelblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* mobile menu transition & fixed position CSS */
+
+@media only screen and (max-width: 1024px) {
+  header nav {
+    transition: 0s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+    position: fixed;
+    width: 100%;
+  }
+}
