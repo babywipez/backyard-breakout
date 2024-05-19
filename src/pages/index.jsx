@@ -1,11 +1,112 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
+import HeroImg from "../images/highres/football_no_vignette.png";
+import FeatureImg from "../images/highres/feature.png";
+import GetStartedImg from "../images/highres/get_started.png";
+import Icon from "../images/bb-logo.png";
+import MagnifyingGlass from "../images/magnifier.png";
+import Trophy from "../images/trophy.png";
+import Handshake from "../images/hand-shake.png";
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <h1 className="">Test</h1>
+        <main className="relative text-custom-white">
+          {/* Hero Section */}
+          <section className="hero bg-custom-black w-full relative h-[600px] flex items-center justify-center">
+            <div className="w-full h-full">
+              <img
+                src={HeroImg}
+                className="hero-img h-full w-full object-cover opacity-30"
+              />
+            </div>
+            <div className="absolute flex align-center text-center flex-col w-full">
+              <div className="w-14 mb-4 mx-auto">
+                <img src={Icon} />
+              </div>
+              <h2 className="hero-text text-4xl px-2 font-extrabold !leading-normal tracking-wide md:p-8 md:text-5xl">
+                LEAGUE WINNING ADVICE & DISCUSSION FROM FANTASY VETERANS
+              </h2>
+              <button className="mt-4 mx-auto p-4 text-2xl">Learn More</button>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="features bg-custom-black w-full relative h-[120vh] flex items-center justify-center border-b-[10px] border-custom-white sm:h-[600px]">
+            <div className="w-full h-full">
+              <img
+                src={FeatureImg}
+                className="h-full w-full object-cover opacity-10"
+              />
+            </div>
+            <div className="absolute flex align-center text-center flex-col w-full">
+              <h3 className="hero-text text-4xl mt-16 font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
+                What we do
+              </h3>
+              <p className="px-4 mt-4 mb-8">
+                We're not here to tell you how to play—just here to give you
+                that extra edge to dominate your league.
+              </p>
+              <section className="mx-auto flex flex-col sm:flex-row sm:container">
+                <section className="p-2 w-[344px] mx-auto md:w-1/3 md:p-4">
+                  <section className="w-[75px] mx-auto border-custom-white border-2 p-5 rounded-full">
+                    <img src={MagnifyingGlass} alt="magnifying glass" />
+                  </section>
+                  <p className="py-6">
+                    Well researched and thoughtful information to help you get
+                    an edge
+                  </p>
+                </section>
+                <section className="p-2 w-[344px] mx-auto md:w-1/3 md:p-4">
+                  <section className="w-[75px] mx-auto border-custom-white border-2 p-5 rounded-full">
+                    <img src={Trophy} alt="trophy" />
+                  </section>
+                  <p className="py-6">
+                    Analysis written by league winners in a variety of league
+                    formats
+                  </p>
+                </section>
+                <section className="p-2 w-[344px] mx-auto md:w-1/3 md:p-4">
+                  <section className="w-[75px] mx-auto border-custom-white border-2 p-5 rounded-full">
+                    <img src={Handshake} alt="a handshake" />
+                  </section>
+                  <p className="py-6">
+                    Insightful player values to help you make impactful trades
+                  </p>
+                </section>
+              </section>
+            </div>
+          </section>
+
+          {/* Get Started Section */}
+          <section className="get-started bg-custom-black w-full relative h-[120vh] sm:h-[600px] flex items-center justify-center">
+            <div className="w-full h-full">
+              <img
+                src={GetStartedImg}
+                className="object-cover h-full w-full opacity-10"
+              />
+            </div>
+            <div className="absolute flex align-center text-center flex-col w-full">
+              <h3 className="hero-text text-4xl mt-16 font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
+                Get Started
+              </h3>
+              <p className="px-4 mt-4 mb-8">
+                Check out our articles, or learn more about how it all started.
+              </p>
+              <section>
+                <Link
+                  to="/blogs"
+                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold"
+                >
+                  Articles
+                </Link>
+                <Link to="/about">About</Link>
+              </section>
+            </div>
+          </section>
+        </main>
       </Layout>
     </>
   );
