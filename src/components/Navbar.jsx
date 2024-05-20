@@ -114,11 +114,11 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/blogs"
+            to="/articles"
             className="my-0 mx-6 no-underline opacity-80 border-custom-black border-b-2 border-solid hover:border-custom-white"
             onClick={hideNavbar}
           >
-            Blogs
+            Articles
           </Link>
           <Link
             to="/about"

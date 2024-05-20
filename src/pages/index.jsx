@@ -81,7 +81,7 @@ export default function Home() {
           </section>
 
           {/* Get Started Section */}
-          <section className="get-started bg-custom-black w-full relative h-[120vh] sm:h-[600px] flex items-center justify-center">
+          <section className="get-started bg-custom-black w-full relative h-[80vh] sm:h-[500px] flex items-center justify-center">
             <div className="w-full h-full">
               <img
                 src={GetStartedImg}
@@ -89,20 +89,29 @@ export default function Home() {
               />
             </div>
             <div className="absolute flex align-center text-center flex-col w-full">
-              <h3 className="hero-text text-4xl mt-16 font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
+              <h3 className="hero-text text-4xl font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
                 Get Started
               </h3>
               <p className="px-4 mt-4 mb-8">
                 Check out our articles, or learn more about how it all started.
               </p>
+              <p className="px-4 mb-8">
+                All of the resources on Backyard Breakout are FREE and always
+                will be.
+              </p>
               <section>
                 <Link
-                  to="/blogs"
-                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold"
+                  to="/articles"
+                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold mr-4"
                 >
                   Articles
                 </Link>
-                <Link to="/about">About</Link>
+                <Link
+                  to="/about"
+                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold"
+                >
+                  About
+                </Link>
               </section>
             </div>
           </section>
