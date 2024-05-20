@@ -39,3 +39,30 @@ html {
   );
   margin-top: -40px;
 }
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+  height: 300px;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+.grid-item {
+  min-height: 275px;
+  background-color: #f0f0f0; /* Light grey background for visibility */
+  border: 1px solid #ccc; /* Optional: border to differentiate articles */
+}
+
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
