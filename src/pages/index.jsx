@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
-import HeroImg from "../images/highres/football_no_vignette.png";
-import FeatureImg from "../images/highres/feature.png";
-import GetStartedImg from "../images/highres/get_started.png";
+import HeroImg from "../images/highres/football_no_vignette.jpeg";
+import FeatureImg from "../images/highres/feature.jpeg";
+import GetStartedImg from "../images/highres/get_started.jpeg";
 import Icon from "../images/bb-logo.png";
 import MagnifyingGlass from "../images/magnifier.png";
 import Trophy from "../images/trophy.png";
@@ -19,22 +19,24 @@ export default function Home() {
             <div className="w-full h-full">
               <img
                 src={HeroImg}
-                className="hero-img h-full w-full object-cover opacity-30"
+                className="h-full w-full object-cover opacity-30"
               />
             </div>
             <div className="absolute flex align-center text-center flex-col w-full">
               <div className="w-14 mb-4 mx-auto">
                 <img src={Icon} />
               </div>
-              <h2 className="hero-text text-4xl px-2 font-extrabold !leading-normal tracking-wide md:p-8 md:text-5xl">
+              <h2 className="txt-shadow text-4xl px-2 font-extrabold !leading-normal tracking-wide md:p-8 md:text-5xl">
                 LEAGUE WINNING ADVICE & DISCUSSION FROM FANTASY VETERANS
               </h2>
-              <button className="mt-4 mx-auto p-4 text-2xl">Learn More</button>
+              <button className="txt-shadow mt-4 mx-auto p-4 text-2xl">
+                Learn More
+              </button>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="features bg-custom-black w-full relative h-[120vh] flex items-center justify-center border-b-[10px] border-custom-white sm:h-[600px]">
+          <section className="txt-shadow features bg-custom-black w-full relative h-[120vh] flex items-center justify-center border-b-[10px] border-custom-white sm:h-[600px]">
             <div className="w-full h-full">
               <img
                 src={FeatureImg}
@@ -42,7 +44,7 @@ export default function Home() {
               />
             </div>
             <div className="absolute flex align-center text-center flex-col w-full">
-              <h3 className="hero-text text-4xl mt-16 font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
+              <h3 className="txt-shadow text-4xl mt-16 font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
                 What we do
               </h3>
               <p className="px-4 mt-4 mb-8">
@@ -89,10 +91,10 @@ export default function Home() {
               />
             </div>
             <div className="absolute flex align-center text-center flex-col w-full">
-              <h3 className="hero-text text-4xl font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
+              <h3 className="txt-shadow text-4xl font-extrabold !leading-normal tracking-wide sm:mt-4 md:text-5xl">
                 Get Started
               </h3>
-              <p className="px-4 mt-4 mb-8">
+              <p className="px-4 mt-4 mb-4">
                 Check out our articles, or learn more about how it all started.
               </p>
               <p className="px-4 mb-8">

@@ -56,7 +56,7 @@ const Navbar = () => {
       </section>
 
       {/* Main Header */}
-      <header className="bg-custom-black flex items-center h-[74px] py-0 px-3 w-full border-b-4 border-solid border-custom-gray lg:px-6">
+      <header className="bg-custom-black flex items-center h-[68px] py-0 px-3 w-full border-b-4 border-solid border-custom-gray lg:px-6">
         <section className="flex items-center">
           {/* Logo */}
           <Link to="/" className="drop-shadow-xl mr-4 lg:mr-0">
@@ -65,7 +65,8 @@ const Navbar = () => {
               alt="Backyard Breakout Logo"
               placeholder="blurred"
               layout="fixed"
-              style={{ width: "50px", height: "50px" }}
+              style={{ width: "45px", height: "45px" }}
+              objectFit="fill"
             />
           </Link>
 

@@ -10,27 +10,33 @@ export default function index({ data }) {
   return (
     <Layout>
       <section className="sm:container sm:mx-auto py-8">
-        <h2 className="text-center text-4xl py-4 font-bold">ARTICLES</h2>
-        <section className="grid-container max-w-[1000px] mx-auto px-4 sm:px-0">
+        <h2 className="text-center text-4xl pb-8 font-bold">ARTICLES</h2>
+        <section className="grid-container max-w-[900px] mx-auto px-4 sm:px-0">
           {articles.map((article) => (
             <Link to={"/articles/" + article.frontmatter.slug} key={article.id}>
-              <div className="grid-item rounded-xl">
-                <div>
+              <div className="grid-item txt-shadow relative bg-custom-black h-[200px] sm:h-[275px]">
+                <div className="img-container absolute h-full">
                   <GatsbyImage
                     image={
                       article.frontmatter.thumb.childImageSharp.gatsbyImageData
                     }
                     alt="Article thumnail"
-                    className="h-[175px] w-full object-cover rounded-t-xl"
+                    className="w-full h-full object-cover opacity-50"
                   />
                 </div>
-                <h3 className="font-bold text-2xl px-2 pt-1">
-                  {article.frontmatter.title}
-                </h3>
-                <p className="text-sm px-2">{article.frontmatter.subtitle}</p>
-                <p className="text-xs px-2 py-1 opacity-80">
-                  By {article.frontmatter.author}
-                </p>
+                <section className="absolute bottom-0 text-custom-white">
+                  <h3 className="font-bold text-2xl px-2 pt-1">
+                    {article.frontmatter.title}
+                  </h3>
+                  <section className="hover-txt">
+                    <p className="text-sm px-2">
+                      {article.frontmatter.subtitle}
+                    </p>
+                    <p className="text-xs px-2 py-1 opacity-85">
+                      By {article.frontmatter.author}
+                    </p>
+                  </section>
+                </section>
               </div>
             </Link>
           ))}

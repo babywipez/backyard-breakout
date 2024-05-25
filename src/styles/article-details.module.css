@@ -1,0 +1,17 @@
+/* Styles specific to article-details.jsx */
+
+.page {
+  -webkit-box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+  -moz-box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+  box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+}
+
+.article p {
+  margin: 1.5rem 0;
+}
+
+.article h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
+}
