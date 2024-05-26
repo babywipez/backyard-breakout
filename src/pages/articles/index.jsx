@@ -74,3 +74,5 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = () => <title>Backyard Breakout | Articles</title>;

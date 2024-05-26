@@ -113,16 +113,16 @@ export default function Home() {
                 All of the resources on Backyard Breakout are FREE and always
                 will be.
               </p>
-              <section>
+              <section className="flex mx-auto">
                 <Link
                   to="/articles"
-                  className="p-4 bg-gradient-to-b from-slate-600 to-slate-800 rounded-xl font-bold mr-6"
+                  className="py-4 px-6 border-2 border-slate-700 bg-gradient-to-b from-slate-600 to-slate-800 hover:from-slate-400 hover:to-slate-700 rounded-lg font-bold mr-8"
                 >
                   Articles
                 </Link>
                 <Link
                   to="/about"
-                  className="p-4 bg-gradient-to-b from-slate-600 to-slate-800 rounded-xl font-bold"
+                  className="py-4 px-6 border-2 border-slate-700 bg-gradient-to-b from-slate-600 to-slate-800 hover:from-slate-400 hover:to-slate-700 rounded-lg font-bold"
                 >
                   About
                 </Link>
@@ -134,3 +134,5 @@ export default function Home() {
     </>
   );
 }
+
+export const Head = () => <title>Backyard Breakout</title>;

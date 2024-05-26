@@ -10,7 +10,7 @@ export default function About() {
       <main className="page-shadow">
         <section className="about flex flex-col items-center justify-between md:p-8 md:flex-row xl:container xl:mx-auto">
           <section className="w-full px-4 py-8 md:w-1/2">
-            <section className="text-center">
+            <section className="text-center leading-6">
               <h1 className="text-4xl font-extrabold py-2">ABOUT</h1>
               <p className="py-2">
                 Welcome to Backyard Breakout! My name is Christopher Cassada,
@@ -63,7 +63,7 @@ export default function About() {
             <h3 className="text-4xl font-bold text-center mb-4">
               Join the Team
             </h3>
-            <p>
+            <p className="leading-loose">
               I'm always looking to expand the community here. If you're
               interested in writing for the blog, I'd love to hear from you!
               Contributors will be fully credited for their articles, providing
@@ -80,3 +80,5 @@ export default function About() {
     </Layout>
   );
 }
+
+export const Head = () => <title>Backyard Breakout | About</title>;
