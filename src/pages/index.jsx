@@ -33,14 +33,20 @@ export default function Home() {
               <p className="px-4">
                 League-winning advice & discussion from fantasy veterans
               </p>
-              <button className="txt-shadow mt-4 mx-auto p-4 text-xl">
+              <Link
+                to="/#features"
+                className="txt-shadow mt-4 mx-auto p-4 text-xl"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="txt-shadow features bg-custom-black w-full relative h-[120vh] flex items-center justify-center border-b-[10px] border-custom-white sm:h-[600px]">
+          <section
+            id="features"
+            className="txt-shadow features bg-custom-black w-full relative h-[120vh] flex items-center justify-center border-b-[10px] border-custom-white sm:h-[600px]"
+          >
             <div className="w-full h-full">
               <img
                 src={FeatureImg}
@@ -110,13 +116,13 @@ export default function Home() {
               <section>
                 <Link
                   to="/articles"
-                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold mr-4"
+                  className="p-4 bg-gradient-to-b from-slate-600 to-slate-800 rounded-xl font-bold mr-6"
                 >
                   Articles
                 </Link>
                 <Link
                   to="/about"
-                  className="p-4 bg-gradient-to-b from-slate-500 to-slate-800 rounded-xl font-bold"
+                  className="p-4 bg-gradient-to-b from-slate-600 to-slate-800 rounded-xl font-bold"
                 >
                   About
                 </Link>

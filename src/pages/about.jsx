@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import ButtonMailto from "../components/ButtonMailto";
 import AboutImg from "../images/highres/about.jpeg";
 import WriterImg from "../images/highres/writer.jpeg";
 
@@ -24,9 +25,9 @@ export default function About() {
               <p className="py-2">
                 I've been playing fantasy football since 2016, and in that time,
                 I've had the honor of clinching several 1st place titles. My
-                experience has taught me a lot about strategy, analysis, and the
-                sheer joy of the game, and I'm excited to share some things I've
-                learned along the way with all of you!
+                experience has taught me a lot about strategy and analysis, and
+                I'm excited to share some things I've learned along the way with
+                all of you!
               </p>
               <h3 className="text-xl font-bold py-2">A Little About Me</h3>
               <p className="py-2">
@@ -38,7 +39,11 @@ export default function About() {
           </section>
           <section className="w-2/3 flex px-4 pb-12 pt-8 md:p-4 md:w-1/2">
             <section className="max-w-[500px] mx-auto">
-              <img src={AboutImg} className="max-w-full section-shadow" />
+              <img
+                src={AboutImg}
+                className="max-w-full section-shadow"
+                alt="Website creator standing next to a statue of Vince Lombardi"
+              />
             </section>
           </section>
         </section>
@@ -51,7 +56,10 @@ export default function About() {
               className="h-full w-full object-cover opacity-30"
             />
           </div>
-          <section className="p-4 absolute text-custom-white sm:max-w-[768px] sm:mx-auto">
+          <section
+            id="contact"
+            className="p-4 absolute text-custom-white sm:max-w-[768px] sm:mx-auto"
+          >
             <h3 className="text-4xl font-bold text-center mb-4">
               Join the Team
             </h3>
@@ -60,7 +68,11 @@ export default function About() {
               interested in writing for the blog, I'd love to hear from you!
               Contributors will be fully credited for their articles, providing
               a platform to share your expertise and insights with a wider
-              audience.
+              audience. Email me at:&nbsp;
+              <ButtonMailto
+                label="cassada.chris@gmail.com"
+                mailto="mailto:cassada.chris@gmail.com"
+              />
             </p>
           </section>
         </section>
