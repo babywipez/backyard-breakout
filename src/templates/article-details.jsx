@@ -10,34 +10,15 @@ export default function ArticleDetails({ data }) {
   const { title, subtitle, author, date, featuredImg, imgCaption } =
     data.markdownRemark.frontmatter;
 
-  // convert timestamp string into readable
-  function formatDateString(dateString) {
-    // Parse the input date string
-    const date = new Date(dateString);
-
-    // Array of month names
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    // Get the month, day, and year
-    const month = monthNames[date.getMonth()];
-    const day = date.getDate();
-    const year = date.getFullYear();
-
-    // Return the formatted date string
-    return `${month} ${day}, ${year}`;
+  // Extract just the Year, Month, and Date from timestamp in article file
+  function extractDate(timestamp) {
+    let date = new Date(timestamp);
+    // Extract the year, month, and day components
+    let year = date.getUTCFullYear();
+    let month = String(date.getUTCMonth() + 1).padStart(2, "0");
+    let day = String(date.getUTCDate()).padStart(2, "0");
+    // Format the date as YYYY-MM-DD
+    return `${year}-${month}-${day}`;
   }
 
   return (
@@ -53,7 +34,7 @@ export default function ArticleDetails({ data }) {
                 {subtitle}
               </p>
               <p className="text-xs">By {author}</p>
-              <p className="text-xs mb-2">{formatDateString(date)}</p>
+              <p className="text-xs mb-2">{extractDate(date)}</p>
             </section>
             <div className="flex justify-center mb-12 flex-col">
               <GatsbyImage
