@@ -7,27 +7,62 @@ import * as styles from "../styles/article-details.module.css";
 export default function ArticleDetails({ data }) {
   // save data from graphql query
   const { html } = data.markdownRemark;
-  const { title, subtitle, author, date, featuredImg } =
+  const { title, subtitle, author, date, featuredImg, imgCaption } =
     data.markdownRemark.frontmatter;
+
+  // convert timestamp string into readable
+  function formatDateString(dateString) {
+    // Parse the input date string
+    const date = new Date(dateString);
+
+    // Array of month names
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    // Get the month, day, and year
+    const month = monthNames[date.getMonth()];
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    // Return the formatted date string
+    return `${month} ${day}, ${year}`;
+  }
 
   return (
     <>
       <Layout>
-        <section className={styles.page}>
-          <section className="p-4 mx-auto max-w-3xl">
-            <h2 className="text-center text-3xl font-extrabold mb-4">
-              {title}
-            </h2>
-            <p className="my-3 text-custom-darkgray font-6xl text-lg">
-              {subtitle}
-            </p>
-            <p className="text-xs">By {author}</p>
-            <p className="text-xs mb-2">{date}</p>
-            <div className="flex justify-center mb-12">
+        <section className="page-shadow">
+          <section className="p-4 mx-auto max-w-3xl leading-8">
+            <section className="mb-4 border-b-2 border-custom-white">
+              <h2 className="text-center text-3xl font-extrabold mb-4">
+                {title}
+              </h2>
+              <p className="my-3 text-custom-darkgray font-6xl text-lg">
+                {subtitle}
+              </p>
+              <p className="text-xs">By {author}</p>
+              <p className="text-xs mb-2">{formatDateString(date)}</p>
+            </section>
+            <div className="flex justify-center mb-12 flex-col">
               <GatsbyImage
                 image={featuredImg.childImageSharp.gatsbyImageData}
                 alt="article image"
               />
+              <p className="text-xs py-2 text-center border-b-2 border-custom-white">
+                {imgCaption}
+              </p>
             </div>
             <div
               dangerouslySetInnerHTML={{ __html: html }}
@@ -50,6 +85,7 @@ export const query = graphql`
         author
         subtitle
         date
+        imgCaption
         featuredImg {
           childImageSharp {
             gatsbyImageData

@@ -17,6 +17,27 @@ html {
   text-shadow: 2px 2px 4px black;
 }
 
+.page-shadow {
+  -webkit-box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+  -moz-box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+  box-shadow: inset 10px 10px 110px 0px rgba(51, 48, 48, 0.4);
+}
+
+.section-shadow {
+  -webkit-box-shadow: 10px 10px 50px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 50px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 50px -20px rgba(0, 0, 0, 0.75);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+/* divider sections in index.jsx and about.jsx */
+
 .hero {
   clip-path: polygon(
     0 0,
@@ -41,12 +62,26 @@ html {
   margin-top: -40px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  width: 100%;
+/* .about {
+  --top: linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
+    radial-gradient(farthest-side, #000 98%, #0000) bottom/100px 100px no-repeat;
+  -webkit-mask: var(--top);
+  mask: var(--top);
 }
+.writer {
+  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px, #0000 98%, #000);
+  -webkit-mask: var(--bottom);
+  mask: var(--bottom);
+  margin-top: -40px;
+} */
+
+/* .about {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+}
+.writer {
+  clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -50px;
+} */
 
 @media (max-width: 640px) {
   .grid-container {

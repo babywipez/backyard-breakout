@@ -19,17 +19,21 @@ export default function Home() {
             <div className="w-full h-full">
               <img
                 src={HeroImg}
+                alt="American football on a field"
                 className="h-full w-full object-cover opacity-30"
               />
             </div>
             <div className="absolute flex align-center text-center flex-col w-full">
               <div className="w-14 mb-4 mx-auto">
-                <img src={Icon} />
+                <img src={Icon} alt="Backyard Breakout logo" />
               </div>
-              <h2 className="txt-shadow text-4xl px-2 font-extrabold !leading-normal tracking-wide md:p-8 md:text-5xl">
-                LEAGUE WINNING ADVICE & DISCUSSION FROM FANTASY VETERANS
+              <h2 className="txt-shadow text-4xl px-2 font-extrabold !leading-normal tracking-wide py-4 md:pb-8 md:text-5xl">
+                BACKYARD BREAKOUT
               </h2>
-              <button className="txt-shadow mt-4 mx-auto p-4 text-2xl">
+              <p className="px-4">
+                League-winning advice & discussion from fantasy veterans
+              </p>
+              <button className="txt-shadow mt-4 mx-auto p-4 text-xl">
                 Learn More
               </button>
             </div>
@@ -40,6 +44,7 @@ export default function Home() {
             <div className="w-full h-full">
               <img
                 src={FeatureImg}
+                alt="American football player catching a pass"
                 className="h-full w-full object-cover opacity-10"
               />
             </div>
@@ -51,7 +56,7 @@ export default function Home() {
                 We're not here to tell you how to play—just here to give you
                 that extra edge to dominate your league.
               </p>
-              <section className="mx-auto flex flex-col sm:flex-row sm:container">
+              <section className="mx-auto flex flex-col sm:flex-row sm:container lg:max-w-[1024px]">
                 <section className="p-2 w-[344px] mx-auto md:w-1/3 md:p-4">
                   <section className="w-[75px] mx-auto border-custom-white border-2 p-5 rounded-full">
                     <img src={MagnifyingGlass} alt="magnifying glass" />
@@ -87,6 +92,7 @@ export default function Home() {
             <div className="w-full h-full">
               <img
                 src={GetStartedImg}
+                alt="American football player running with ball"
                 className="object-cover h-full w-full opacity-10"
               />
             </div>
