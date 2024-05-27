@@ -16,7 +16,10 @@ export default function Footer() {
           </h3>
         </section>
         <section className="flex h-12 w-[200px] mx-auto items-center justify-center bg-custom-white rounded-xl">
-          <Link to="/">
+          <Link
+            to="https://github.com/babywipez/backyard-breakout"
+            target="_blank"
+          >
             <StaticImage
               className=""
               src="../images/github.png"
@@ -26,7 +29,7 @@ export default function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </Link>
-          <Link to="/" className="ml-3">
+          <Link to="/about/#contact" className="ml-3">
             <StaticImage
               className=""
               src="../images/email.png"
@@ -36,7 +39,7 @@ export default function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </Link>
-          <Link to="/" className="ml-3">
+          <Link to="https://x.com/bbreakoutff" target="_blank" className="ml-3">
             <StaticImage
               className=""
               src="../images/twitter.png"
