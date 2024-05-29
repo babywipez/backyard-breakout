@@ -10,17 +10,6 @@ export default function ArticleDetails({ data }) {
   const { title, subtitle, author, date, featuredImg, imgCaption } =
     data.markdownRemark.frontmatter;
 
-  // Extract just the Year, Month, and Date from timestamp in article file
-  function extractDate(timestamp) {
-    let date = new Date(timestamp);
-    // Extract the year, month, and day components
-    let year = date.getUTCFullYear();
-    let month = String(date.getUTCMonth() + 1).padStart(2, "0");
-    let day = String(date.getUTCDate()).padStart(2, "0");
-    // Format the date as YYYY-MM-DD
-    return `${year}-${month}-${day}`;
-  }
-
   return (
     <>
       <Layout>
@@ -34,7 +23,7 @@ export default function ArticleDetails({ data }) {
                 {subtitle}
               </p>
               <p className="text-xs">By {author}</p>
-              <p className="text-xs mb-2">{extractDate(date)}</p>
+              <p className="text-xs mb-2">{date.substring(0, 10)}</p>
             </section>
             <div className="flex justify-center mb-12 flex-col">
               <GatsbyImage

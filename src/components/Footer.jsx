@@ -16,9 +16,10 @@ export default function Footer() {
           </h3>
         </section>
         <section className="flex h-12 w-[200px] mx-auto items-center justify-center bg-custom-white rounded-xl">
-          <Link
-            to="https://github.com/babywipez/backyard-breakout"
+          <a
+            href="https://github.com/babywipez/backyard-breakout"
             target="_blank"
+            rel="noreferrer"
           >
             <StaticImage
               className=""
@@ -28,7 +29,7 @@ export default function Footer() {
               layout="fixed"
               style={{ width: "30px", height: "30px" }}
             />
-          </Link>
+          </a>
           <Link to="/about/#contact" className="ml-3">
             <StaticImage
               className=""
@@ -39,7 +40,12 @@ export default function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </Link>
-          <Link to="https://x.com/bbreakoutff" target="_blank" className="ml-3">
+          <a
+            href="https://x.com/bbreakoutff"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-3"
+          >
             <StaticImage
               className=""
               src="../images/twitter.png"
@@ -48,7 +54,7 @@ export default function Footer() {
               layout="fixed"
               style={{ width: "30px", height: "30px" }}
             />
-          </Link>
+          </a>
         </section>
         <section className="p-4 mx-auto flex justify-center">
           <Link

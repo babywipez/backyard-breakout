@@ -22,9 +22,10 @@ const Navbar = () => {
       {/* Top Header Section */}
       <section className="w-full bg-gradient-to-r from-custom-black to-custom-gray text-custom-black px-4">
         <section className="flex h-8 items-center justify-end">
-          <Link
-            to="https://github.com/babywipez/backyard-breakout"
+          <a
+            href="https://github.com/babywipez/backyard-breakout"
             target="_blank"
+            rel="noreferrer"
           >
             <StaticImage
               className=""
@@ -34,7 +35,7 @@ const Navbar = () => {
               layout="fixed"
               style={{ width: "30px", height: "30px" }}
             />
-          </Link>
+          </a>
           <Link to="/about/#contact" className="ml-1">
             <StaticImage
               className=""
@@ -45,7 +46,12 @@ const Navbar = () => {
               style={{ width: "30px", height: "30px" }}
             />
           </Link>
-          <Link to="https://x.com/bbreakoutff" target="_blank" className="ml-1">
+          <a
+            href="https://x.com/bbreakoutff"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-1"
+          >
             <StaticImage
               className=""
               src="../images/twitter.png"
@@ -54,7 +60,7 @@ const Navbar = () => {
               layout="fixed"
               style={{ width: "30px", height: "30px" }}
             />
-          </Link>
+          </a>
         </section>
       </section>
 
