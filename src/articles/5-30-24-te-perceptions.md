@@ -1,6 +1,6 @@
 ---
 title: 2024 Tight End Perceptions
-subtitle: Running a pairings experiment on last year's tight ends. Is the landscape of TE changing?
+subtitle: Let's run another pairings experiment - this time on 2023 tight ends. Is the landscape of TE changing?
 author: Christopher Cassada
 slug: tight-end-perceptions
 date: 2024-05-30 00:00:00 +0000
@@ -9,7 +9,7 @@ featuredImg: ../images/featured/tight-end-perception-featured.jpeg
 imgCaption: Evan Engram may have not blown us away, but he finished 2023 as the TE2 in PPR
 ---
 
-The first thing someone suggested to me after reading my first article was to run a similar experiment with tight ends that I did with quarterbacks. This is a great idea because the TE position is very similar to QB in many ways. In a typical redraft league, teams are only playing one tight end, so having an elite option where yours is putting up 5-10 more points per game than the league average TE is a huge boost to your fantasy output.
+I received a suggestion to run a similar experiment with tight ends that I did with quarterbacks. This is a great idea because the TE position is very similar to QB in many ways. In a typical redraft league, teams are only playing one tight end, so having an elite option where yours is putting up 5-10 more points per game than the league average TE is a nice boost to your fantasy output.
 
 Historically, however, the position has been one the most frustrating. Even when comparing tight ends to something like D/ST, the matchup often means nothing. Trends and historical data on how defenses play against tight ends can be helpful, but I’m sure everyone reading this article can think of several times where the matchup looked perfect for a streaming option, and you got a whopping 5 points from them.
 
